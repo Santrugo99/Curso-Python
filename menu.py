@@ -1,6 +1,8 @@
 from funciones_menu import *
 
 lista_productos = []
+tipos_productos = []
+relacion_tipos_y_productos = {}
 
 
 while True:
@@ -12,6 +14,8 @@ while True:
     print('Opción 3: Añadir Tipos De Productos: ')
     print('Opción 4: Listar Productos: ')
     print('Opción 5: Verificar Existencia De Productos: ')
+    print('Opción 6: Relacionar tipos y productos: ')
+    print('Opción 7: Ver relacion entre tipos y productos: ')
     print('--------------------------------')
 
     solicitud_info = input('Coloca la opción que desees: ')
@@ -19,15 +23,19 @@ while True:
     match solicitud_info:
         case "1": 
             producto_nuevo = input("Digita tu producto: ")
-            agregar_producto_a_lista(producto_nuevo,lista_productos)
+            agregar_elemento_a_lista(producto_nuevo,lista_productos)
         case "2":
+            listar_elementos(lista_productos,"productos")
             eliminar_producto = input("Digita tu producto: ")
             eliminar_producto_de_la_lista(eliminar_producto,lista_productos)
             print(f"se eliminó correctamente {lista_productos}")
         case "3":
-            print('Usted ha elegido la opción 3')
+            tipo_producto_nuevo = input("Digita el tipo de tu producto: ")
+            agregar_elemento_a_lista(tipo_producto_nuevo,tipos_productos)
         case "4":
-            listar_productos(lista_productos)
+            listar_elementos(lista_productos,"productos")
+        case "6":
+            relacionar_tipos_y_productos(tipos_productos, lista_productos, relacion_tipos_y_productos)
+            print(relacion_tipos_y_productos)
         case _:
-            print("Usted no ha seleccionado una opción válida")
-            
+            print("Usted no ha seleccionado una opción válida")          
