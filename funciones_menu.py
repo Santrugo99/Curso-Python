@@ -30,4 +30,7 @@ def relacionar_tipos_y_productos(tipos_productos,lista_productos,relacion_tipos_
     listar_elementos(lista_productos, "lista de productos")
     indice_producto = int(input("selecciona el producto a relacionar: "))
     producto = lista_productos[indice_producto]
-    relacion_tipos_y_productos[tipo_producto] = producto  
+    if tipo_producto in relacion_tipos_y_productos:
+        relacion_tipos_y_productos[tipo_producto].append(producto)
+    else:
+        relacion_tipos_y_productos[tipo_producto] = [producto]

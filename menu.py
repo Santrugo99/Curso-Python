@@ -26,9 +26,9 @@ while True:
             agregar_elemento_a_lista(producto_nuevo,lista_productos)
         case "2":
             listar_elementos(lista_productos,"productos")
-            eliminar_producto = input("Digita tu producto: ")
+            eliminar_producto = input("Digita el producto que deseas eliminar: ")
             eliminar_producto_de_la_lista(eliminar_producto,lista_productos)
-            print(f"se eliminó correctamente {lista_productos}")
+            print(f"ahora la lista es {lista_productos}")
         case "3":
             tipo_producto_nuevo = input("Digita el tipo de tu producto: ")
             agregar_elemento_a_lista(tipo_producto_nuevo,tipos_productos)
@@ -38,4 +38,4 @@ while True:
             relacionar_tipos_y_productos(tipos_productos, lista_productos, relacion_tipos_y_productos)
             print(relacion_tipos_y_productos)
         case _:
-            print("Usted no ha seleccionado una opción válida")          
+            print("Usted no ha seleccionado una opción válida")
