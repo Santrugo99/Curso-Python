@@ -1,4 +1,6 @@
 def agregar_elemento_a_lista(elemento,lista):
+    if not isinstance(lista, list):
+        raise ValueError("agregar elemento a lista: El parámetro lista no es una lista")
     if elemento:
         elemento = elemento.lower()
         lista.append(elemento)
