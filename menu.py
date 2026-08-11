@@ -4,8 +4,6 @@ lista_productos = []
 tipos_productos = []
 relacion_tipos_y_productos = {}
 
-agregar_elemento_a_lista("manzana",2)
-
 while True:
     print('--------------------------------')
     print('Menú')
