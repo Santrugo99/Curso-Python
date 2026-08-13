@@ -21,7 +21,7 @@ while True:
     
     match solicitud_info:
         case "1": 
-            producto_nuevo = input("Digita tu producto: ")
+            producto_nuevo = Producto.crear_producto()
             agregar_elemento_a_lista(producto_nuevo,lista_productos)
         case "2":
             listar_elementos(lista_productos,"productos")

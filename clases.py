@@ -15,14 +15,19 @@ class Producto:
         print(f"el precio del producto es {self.precio}")
         print(f"la cantidad del producto es {self.cantidad}")
     
+    @staticmethod     
+    def crear_producto():
+        nombre = input("Digita el nombre del producto: ")
+        precio = int(input("Digita el precio del producto: "))
+        cantidad = int(input("Digita el cantidad del producto: "))
+        return Producto(nombre, precio, cantidad)
+    
+    def __str__(self):
+        return f"{self.nombre} - {self.precio} - {self.cantidad}"
+    
+    
+class TipoProducto:
+    def __init__(self,nombre):
+        self.nombre = nombre
         
-        
-        
-
-producto_1 = Producto("Manzana",1000,10)
-producto_1.sumar_cantidad(15)
-producto_1.restar_cantidad(7)
-producto_1.mostrar_info()
-
-
-
+    
