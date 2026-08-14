@@ -29,7 +29,7 @@ while True:
             eliminar_producto_de_la_lista(eliminar_producto,lista_productos)
             print(f"ahora la lista es {lista_productos}")
         case "3":
-            tipo_producto_nuevo = input("Digita el tipo de tu producto: ")
+            tipo_producto_nuevo = TipoProducto.crear_tipo_producto()
             agregar_elemento_a_lista(tipo_producto_nuevo,tipos_productos)
         case "4":
             listar_elementos(lista_productos,"productos")
